@@ -1,0 +1,91 @@
+@import "./css/_variables.scss";
+@import "./css/_reset.scss";
+@import "./css/_mixin.scss";
+
+.calculator {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  padding: 19px;
+  background-color: $background;
+  box-sizing: border-box;
+
+  &__display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  &__display-input {
+    color: $white;
+    border: 0;
+    outline: transparent;
+    background: none;
+    font-size: 48px;
+    text-align: right;
+    padding: 0;
+    height: calculator-rem($displayFontSize); //mesmo tamanho da fonte pra não criar uma margem extra do input.
+  }
+
+  &__display-result {
+    color: $lightGrey;
+    font-size: calculator-rem($displayFontSize);
+  }
+
+  &__display-history {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  &__display-line {
+    background-color: $line;
+    border-radius: 5px;
+    height: 1px;
+    margin: 20px 0 25px 0;
+  }
+
+  &__buttons-wraper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    &--button {
+      width: 73px;
+      height: 75px;
+      border-radius: 9px;
+      background-color: $grey;
+      border: 0;
+      color: $white;
+      font-size: calculator-rem($buttonFontSize);
+
+      &:hover{
+        background-color: lighten($grey,10%);
+      }
+    }
+
+    &--button-bg-red {
+      background-color: $red;
+      color: $grey;
+
+      &:hover{
+        background-color: lighten($red,10%);
+      }
+    }
+    &--button-green {
+      color: $green;
+    }
+    &--button-bg-green {
+      background-color: $green;
+      color: $grey;
+      
+      &:hover{
+        background-color: lighten($green,10%);
+      }
+    }
+
+  }
+
+
+}

@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+* {
+  font-family: "Inter", sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.calculator {
+  width: 390px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 19px;
+  background-color: #292727;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.calculator__display {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.calculator__display-input {
+  color: #FFFFFF;
+  border: 0;
+  outline: transparent;
+  background: none;
+  font-size: 48px;
+  text-align: right;
+  padding: 0;
+  height: 3rem;
+}
+
+.calculator__display-result {
+  color: #969696;
+  font-size: 3rem;
+}
+
+.calculator__display-history {
+  margin-top: 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.calculator__display-line {
+  background-color: #4E4D4D;
+  border-radius: 5px;
+  height: 1px;
+  margin: 20px 0 25px 0;
+}
+
+.calculator__buttons-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.calculator__buttons-wraper--button {
+  width: 73px;
+  height: 75px;
+  border-radius: 9px;
+  background-color: #343434;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 2.25rem;
+}
+
+.calculator__buttons-wraper--button:hover {
+  background-color: #4e4e4e;
+}
+
+.calculator__buttons-wraper--button-bg-red {
+  background-color: #FF5959;
+  color: #343434;
+}
+
+.calculator__buttons-wraper--button-bg-red:hover {
+  background-color: #ff8c8c;
+}
+
+.calculator__buttons-wraper--button-green {
+  color: #52DF68;
+}
+
+.calculator__buttons-wraper--button-bg-green {
+  background-color: #52DF68;
+  color: #343434;
+}
+
+.calculator__buttons-wraper--button-bg-green:hover {
+  background-color: #7de78e;
+}
+/*# sourceMappingURL=style.css.map */
