@@ -66,10 +66,12 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
   padding: 19px;
   background-color: #292727;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .calculator__display {
