@@ -1,3 +1,4 @@
+//#region CONSTS - ELEMENTOS DO DOM
 //-------------------------CONSTANTES---------------------------------
 const $buttons = document.querySelectorAll(".calc-button");
 const $display = document.querySelector(".calculator__display-input");
@@ -11,9 +12,9 @@ const $callback = document.querySelector(".calculator__display-history");
 const $closeCallback = document.querySelector(".calculator__callback__close-button");
 const $callbackWindow = document.querySelector(".calculator__callback");
 const $callbackOperation = document.querySelector(".calculator__callback__operation")
-const $callbackResult = document.querySelector(".calculator__callback__result")
-
-//--------------------------VARIÁVEIS---------------------------------
+const $callbackResult = document.querySelector(".calculator__callback__result");
+//#endregion
+//#region VARIÁVEIS
 let n1 = "";
 let n2 = "";
 let operation = false;
@@ -21,8 +22,8 @@ let previous = "";
 let firstSignal = false;
 let callbackResult = "";
 let callbackOperation = "";
-
-//----------------------------FUNÇÕES---------------------------------
+//#endregion
+//#region FUNÇÕES
 function result() {
   if (operation) {
     callbackOperation = (n1 + " " + previous + " " + n2);
@@ -49,8 +50,8 @@ function displayResult(){
   $result.textContent = n1;
   $display.value = n1;
 }
-
-//----------------------------BOTÕES----------------------------------
+//#endregion
+//#region BOTÕES
 //BOTÃO CLEAR (limpa toda a calculadora)
 $clear.addEventListener("click", function () {
   $display.value = "";
@@ -78,9 +79,8 @@ $buttons.forEach(function ($button) {
 //BOTÕES DE OPERAÇÃO
 $operations.forEach(function ($button) {
   $button.addEventListener("click", function () {
-    result();
+    displayResult();
     previous = $button.textContent;
-    $result.textContent = n1;
     operation = !operation;
     $display.value = $display.value + $button.textContent;
   });
@@ -110,12 +110,15 @@ $signal.addEventListener("click", function () {
   displayResult();
 });
 
+//BOTÃO DE HISTÓRICO
 $callback.addEventListener("click", function(){
   $callbackWindow.classList.toggle('closed');
   $callbackOperation.textContent = callbackOperation;
   $callbackResult.textContent = callbackResult;
   });
 
+//BOTÃO DE FECHAR O HISTÓRICO
 $closeCallback.addEventListener("click", function(){
   $callbackWindow.classList.toggle('closed');
 });
+//#endregion
